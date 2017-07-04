@@ -42,8 +42,9 @@ def config = [:]
 
    stage('Preparation') { // for display purposes
       mvnHome = tool 'M3'
-      sh 'pwd'
+      checkout scm
       sh 'ls -l'
+      
    }
    stage('Build') {
          sh "set;env"
