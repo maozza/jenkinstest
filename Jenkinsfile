@@ -1,8 +1,5 @@
 node {
 def config = [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = config
-    body()
 	env.IS_RELEASE_BUILD = '0'
     echo 'input parameters:'
     for ( e in config ) {
